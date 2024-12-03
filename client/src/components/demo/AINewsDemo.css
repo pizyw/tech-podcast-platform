@@ -1,0 +1,130 @@
+.ai-news-container {
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.news-tabs {
+  margin-bottom: 24px;
+}
+
+.podcast-card {
+  margin-bottom: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.podcast-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.cover-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-container img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cover-container:hover .cover-overlay {
+  opacity: 1;
+}
+
+.cover-container:hover img {
+  transform: scale(1.05);
+}
+
+.podcast-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.podcast-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 8px;
+}
+
+.action-buttons {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-buttons .ant-btn {
+  padding: 4px 8px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .ai-news-container {
+    padding: 16px;
+  }
+
+  .podcast-card {
+    margin-bottom: 16px;
+  }
+
+  .cover-container img {
+    height: 200px;
+  }
+
+  .action-buttons {
+    flex-wrap: wrap;
+  }
+}
+
+/* 自定义滚动条 */
+.ai-news-container::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.ai-news-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.ai-news-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.ai-news-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

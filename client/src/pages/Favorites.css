@@ -1,0 +1,189 @@
+.favorites-page {
+  padding: 24px;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.favorites-header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.favorites-header h2 {
+  margin-bottom: 8px;
+}
+
+.favorites-header .anticon {
+  color: #ff4d4f;
+  margin-right: 8px;
+}
+
+.favorites-tabs {
+  margin-bottom: 24px;
+}
+
+.favorites-tabs .ant-tabs-tab {
+  padding: 12px 24px;
+}
+
+.favorites-tabs .ant-tabs-tab .anticon {
+  margin-right: 8px;
+}
+
+.episode-card {
+  margin-bottom: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.episode-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.episode-cover {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.episode-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.episode-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.episode-card:hover .episode-overlay {
+  opacity: 1;
+}
+
+.episode-card:hover .episode-cover img {
+  transform: scale(1.05);
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.progress-bar .ant-progress-inner {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.episode-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.episode-info {
+  width: 100%;
+}
+
+.episode-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.episode-tags .ant-tag {
+  margin: 0;
+  border-radius: 4px;
+}
+
+.ant-card-actions {
+  background: #fafafa;
+}
+
+.ant-card-actions > li {
+  margin: 12px 0;
+}
+
+.ant-card-actions .ant-btn {
+  padding: 4px 12px;
+}
+
+.ant-empty {
+  padding: 48px 0;
+}
+
+.ant-empty .ant-btn {
+  margin-top: 16px;
+}
+
+/* 动画效果 */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.episode-overlay .ant-btn:hover {
+  animation: pulse 0.3s ease-in-out;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .favorites-page {
+    padding: 16px;
+  }
+
+  .episode-cover {
+    height: 160px;
+  }
+
+  .favorites-tabs .ant-tabs-tab {
+    padding: 8px 16px;
+  }
+}
+
+/* 自定义滚动条 */
+.favorites-page::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.favorites-page::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.favorites-page::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.favorites-page::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

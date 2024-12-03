@@ -1,0 +1,222 @@
+.podcast-detail {
+  padding: 24px;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.podcast-header {
+  margin-bottom: 32px;
+  padding: 32px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #373737 100%);
+  border-radius: 16px;
+  color: #fff;
+}
+
+.podcast-header .ant-typography {
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.cover-image {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.cover-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.podcast-info {
+  width: 100%;
+}
+
+.podcast-info .ant-space-item {
+  width: 100%;
+}
+
+.podcast-info .ant-tag {
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin: 4px;
+}
+
+.podcast-info .ant-statistic {
+  margin-bottom: 24px;
+}
+
+.podcast-info .ant-statistic-title {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.podcast-info .ant-statistic-content {
+  color: #fff;
+}
+
+.detail-tabs {
+  margin-top: 24px;
+}
+
+.detail-tabs .ant-tabs-tab {
+  padding: 12px 24px;
+}
+
+.detail-tabs .ant-card {
+  border-radius: 12px;
+}
+
+.comment-section {
+  padding: 16px 0;
+}
+
+.comment-form {
+  margin-bottom: 32px;
+}
+
+.comment-input {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.comment-input .ant-form-item {
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+.comment-list {
+  margin-top: 24px;
+}
+
+.comment-list .ant-list-item {
+  padding: 16px;
+  background: #fafafa;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.reply-list {
+  margin-top: 16px;
+  margin-left: 48px;
+}
+
+.reply-list .ant-list-item {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 8px;
+}
+
+.comment-time {
+  color: #999;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* 动画效果 */
+.ant-btn {
+  transition: all 0.3s ease;
+}
+
+.ant-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .podcast-detail {
+    padding: 16px;
+  }
+
+  .podcast-header {
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .cover-image {
+    margin-bottom: 24px;
+  }
+
+  .podcast-info .ant-space {
+    gap: 16px !important;
+  }
+
+  .podcast-info .ant-space-item {
+    margin-bottom: 16px;
+  }
+
+  .detail-tabs .ant-tabs-tab {
+    padding: 8px 16px;
+  }
+}
+
+/* 自定义滚动条 */
+.podcast-detail::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.podcast-detail::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.podcast-detail::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.podcast-detail::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* 播放按钮特效 */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(24, 144, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(24, 144, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(24, 144, 255, 0);
+  }
+}
+
+.ant-btn-primary {
+  animation: pulse 2s infinite;
+}
+
+/* 收藏按钮动画 */
+@keyframes heart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.ant-btn-icon-only .anticon-heart-filled {
+  color: #ff4d4f;
+  animation: heart 0.3s ease-in-out;
+}
+
+/* 统计数据悬停效果 */
+.ant-statistic {
+  transition: transform 0.3s ease;
+}
+
+.ant-statistic:hover {
+  transform: translateY(-5px);
+}

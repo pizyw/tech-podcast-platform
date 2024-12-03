@@ -1,0 +1,151 @@
+.audio-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  z-index: 1000;
+}
+
+.player-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  gap: 24px;
+  align-items: center;
+}
+
+.track-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cover-image {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.track-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.track-details .ant-typography {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.progress-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.progress-slider {
+  flex: 1;
+  margin: 0 12px;
+}
+
+.time-display {
+  min-width: 45px;
+  text-align: center;
+}
+
+.volume-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.volume-slider {
+  width: 100px;
+}
+
+.playback-rate {
+  margin-left: 12px;
+}
+
+.playback-rate select {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .player-content {
+    grid-template-columns: 250px 1fr 200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .player-content {
+    grid-template-columns: 200px 1fr 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .player-content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .track-info {
+    justify-content: center;
+  }
+
+  .volume-controls {
+    justify-content: center;
+  }
+}
+
+/* 播放控制按钮样式 */
+.ant-btn-text {
+  color: #1890ff;
+}
+
+.ant-btn-text:hover {
+  color: #40a9ff;
+  background: rgba(24, 144, 255, 0.1);
+}
+
+/* 进度条和音量条样式 */
+.ant-slider-track {
+  background-color: #1890ff;
+}
+
+.ant-slider-handle {
+  border-color: #1890ff;
+}
+
+.ant-slider:hover .ant-slider-track {
+  background-color: #40a9ff;
+}
+
+.ant-slider:hover .ant-slider-handle {
+  border-color: #40a9ff;
+}
+
+/* 加载状态样式 */
+.ant-btn-loading {
+  cursor: not-allowed;
+  opacity: 0.7;
+}

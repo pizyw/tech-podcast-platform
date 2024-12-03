@@ -1,0 +1,122 @@
+.main-header {
+  padding: 0 24px;
+  background: #001529;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 48px;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  height: 32px;
+}
+
+.main-menu {
+  background: transparent;
+  border-bottom: none;
+  color: #fff;
+}
+
+.main-menu .ant-menu-item {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 16px;
+}
+
+.main-menu .ant-menu-item:hover {
+  color: #fff;
+}
+
+.main-menu .ant-menu-item-selected {
+  color: #fff;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.search-button,
+.notification-button {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 20px;
+}
+
+.search-button:hover,
+.notification-button:hover {
+  color: #fff;
+}
+
+.user-dropdown {
+  color: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.user-dropdown:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.username {
+  margin: 0 4px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .main-header {
+    padding: 0 12px;
+  }
+
+  .logo {
+    margin-right: 24px;
+  }
+
+  .username {
+    display: none;
+  }
+
+  .main-menu .ant-menu-item {
+    padding: 0 12px;
+  }
+}
+
+/* 动画效果 */
+.ant-dropdown-trigger {
+  transition: all 0.3s;
+}
+
+.ant-dropdown-trigger:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* 搜索框动画 */
+.ant-input-search {
+  transition: all 0.3s;
+}
+
+/* 通知徽标样式 */
+.ant-badge-count {
+  box-shadow: 0 0 0 1px #001529;
+}

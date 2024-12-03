@@ -1,0 +1,182 @@
+.podcast-hosts {
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.section-header {
+  margin-bottom: 24px;
+}
+
+.section-header h3 {
+  margin-bottom: 8px;
+}
+
+.section-header .anticon {
+  color: #faad14;
+  margin-right: 8px;
+}
+
+.host-card {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.host-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.host-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.host-title {
+  margin-left: 16px;
+  flex: 1;
+}
+
+.host-name {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.verified {
+  border: 2px solid #52c41a;
+}
+
+.host-bio {
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.host-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding: 12px 0;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+}
+
+.stat-item .anticon {
+  color: #1890ff;
+}
+
+.host-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tag {
+  padding: 2px 8px;
+  background: #f5f5f5;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #666;
+}
+
+.latest-episode {
+  background: #f8f8f8;
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+.episode-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.episode-title {
+  display: block;
+  font-size: 14px;
+  margin-top: 4px;
+  color: #666;
+}
+
+.episode-meta {
+  color: #999;
+  font-size: 12px;
+}
+
+.play-button {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.host-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.view-more {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.view-more .ant-btn {
+  font-size: 16px;
+}
+
+/* 动画效果 */
+@keyframes shine {
+  0% {
+    box-shadow: 0 0 0 0 rgba(250, 173, 20, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(250, 173, 20, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(250, 173, 20, 0);
+  }
+}
+
+.verified {
+  animation: shine 2s infinite;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .podcast-hosts {
+    padding: 16px;
+  }
+
+  .host-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .host-title {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+
+  .host-actions {
+    flex-direction: column;
+  }
+}
+
+/* 丝带样式 */
+.ant-ribbon-wrapper {
+  position: relative;
+}
+
+.ant-ribbon {
+  font-weight: 500;
+  height: 24px;
+  line-height: 24px;
+}
